@@ -93,10 +93,10 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     end
   rescue Gitlab::OAuth::SignupDisabledError
     label = Gitlab::OAuth::Provider.label_for(oauth['provider'])
-    message = "没有绑定 GitLab 账号前是无法使用 #{label} 账号登陆系统。"
+    message = "没有绑定 富友Code 账号前是无法使用 #{label} 账号登陆系统。"
 
     if current_application_settings.signup_enabled?
-      message << " 请先创建一个 GitLab 账号，然后再绑定 #{label} 账号。"
+      message << " 请先创建一个 富友Code 账号，然后再绑定 #{label} 账号。"
     end
 
     flash[:notice] = message
