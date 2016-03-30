@@ -1,5 +1,6 @@
 *.log
 *.swp
+*.suo
 .DS_Store
 .bundle
 .chef
