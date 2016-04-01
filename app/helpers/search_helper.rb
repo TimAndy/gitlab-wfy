@@ -26,7 +26,7 @@ module SearchHelper
     [
       { label: "个人资料设置", url: profile_path },
       { label: "SSH 密钥",         url: profile_keys_path },
-      { label: "仪表盘",        url: root_path },
+      { label: "看板",        url: root_path },
       { label: "管理后台",       url: admin_root_path },
     ]
   end
