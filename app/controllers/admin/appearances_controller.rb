@@ -1,3 +1,4 @@
+#encoding: utf-8
 class Admin::AppearancesController < Admin::ApplicationController
   before_action :set_appearance, except: :create
 

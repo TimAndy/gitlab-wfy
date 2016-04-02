@@ -1,3 +1,4 @@
+#encoding: utf-8
 module TimeHelper
   def duration_in_words(finished_at, started_at)
     if finished_at && started_at

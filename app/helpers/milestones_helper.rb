@@ -1,3 +1,4 @@
+#encoding: utf-8
 module MilestonesHelper
   def milestones_filter_path(opts = {})
     if @project

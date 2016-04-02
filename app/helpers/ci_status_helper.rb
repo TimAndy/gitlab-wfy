@@ -1,3 +1,4 @@
+#encoding: utf-8
 module CiStatusHelper
   def ci_status_path(ci_commit)
     project = ci_commit.project

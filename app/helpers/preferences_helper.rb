@@ -1,3 +1,4 @@
+#encoding: utf-8
 # Helper methods for per-User preferences
 module PreferencesHelper
   def layout_choices

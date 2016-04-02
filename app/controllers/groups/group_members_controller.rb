@@ -1,3 +1,4 @@
+#encoding: utf-8
 class Groups::GroupMembersController < Groups::ApplicationController
   # Authorize
   before_action :authorize_admin_group_member!, except: [:index, :leave]

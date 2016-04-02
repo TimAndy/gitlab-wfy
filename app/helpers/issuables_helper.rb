@@ -1,3 +1,4 @@
+#encoding: utf-8
 module IssuablesHelper
 
   def sidebar_gutter_toggle_icon

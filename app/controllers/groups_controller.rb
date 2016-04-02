@@ -1,3 +1,4 @@
+#encoding: utf-8
 class GroupsController < Groups::ApplicationController
   include FilterProjects
   include IssuesAction

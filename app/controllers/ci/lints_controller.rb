@@ -1,3 +1,4 @@
+#encoding: utf-8
 module Ci
   class LintsController < ApplicationController
     before_action :authenticate_user!

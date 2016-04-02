@@ -1,3 +1,4 @@
+#encoding: utf-8
 require 'task_list'
 require 'task_list/filter'
 

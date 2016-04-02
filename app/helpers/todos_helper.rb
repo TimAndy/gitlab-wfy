@@ -1,3 +1,4 @@
+#encoding: utf-8
 module TodosHelper
   def todos_pending_count
     current_user.todos.pending.count

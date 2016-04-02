@@ -44,7 +44,7 @@
         prefixAgo: null,
         prefixFromNow: null,
         suffixAgo: "之前",
-        suffixFromNow: null,
+        suffixFromNow: "之后",
         seconds: "不到 1 分钟",
         minute: "大约 1 分钟",
         minutes: " %d 分钟",
@@ -56,7 +56,7 @@
         months: " %d 个月",
         year: "大约 1 年",
         years: " %d 年",
-        wordSeparator: "",
+        wordSeparator: " ",
         numbers: []
       }
     },

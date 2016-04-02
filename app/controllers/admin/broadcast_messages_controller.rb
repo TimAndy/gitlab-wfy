@@ -1,3 +1,4 @@
+#encoding: utf-8
 class Admin::BroadcastMessagesController < Admin::ApplicationController
   before_action :finder, only: [:edit, :update, :destroy]
 

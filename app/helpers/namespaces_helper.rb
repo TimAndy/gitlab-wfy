@@ -1,3 +1,4 @@
+#encoding: utf-8
 module NamespacesHelper
   def namespaces_options(selected = :current_user, display_path: false)
     groups = current_user.owned_groups + current_user.masters_groups

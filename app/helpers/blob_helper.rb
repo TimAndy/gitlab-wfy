@@ -1,3 +1,4 @@
+#encoding: utf-8
 module BlobHelper
   def highlighter(blob_name, blob_content, nowrap: false)
     Gitlab::Highlight.new(blob_name, blob_content, nowrap: nowrap)

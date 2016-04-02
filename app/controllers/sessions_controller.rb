@@ -1,3 +1,4 @@
+#encoding: utf-8
 class SessionsController < Devise::SessionsController
   include AuthenticatesWithTwoFactor
   include Recaptcha::ClientHelper
@@ -48,7 +49,7 @@ class SessionsController < Devise::SessionsController
     user.save
 
     redirect_to edit_user_password_path(reset_password_token: token),
-      notice: "ÇëÎªÄúµÄÐÂÕÊ»§´´½¨ÃÜÂë¡£"
+      notice: "è¯·ä¸ºæ‚¨çš„æ–°å¸æˆ·åˆ›å»ºå¯†ç ã€‚"
   end
 
   def user_params

@@ -1,3 +1,4 @@
+#encoding: utf-8
 class ProjectsController < Projects::ApplicationController
   include ExtractsPath
 
@@ -124,7 +125,7 @@ class ProjectsController < Projects::ApplicationController
     return access_denied! unless can?(current_user, :remove_project, @project)
 
     ::Projects::DestroyService.new(@project, current_user, {}).pending_delete!
-    flash[:alert] = "项目 '#{@project.name}' 已被删除。"
+    flash[:alert] = "项目 '#{@project.name}' 将被删除。"
 
     redirect_to dashboard_projects_path
   rescue Projects::DestroyService::DestroyError => ex

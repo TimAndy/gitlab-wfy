@@ -1,3 +1,4 @@
+#encoding: utf-8
 module BroadcastMessagesHelper
   def broadcast_message(message = BroadcastMessage.current)
     return unless message.present?
