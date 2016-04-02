@@ -1,5 +1,6 @@
 *.log
 *.swp
+*.suo
 .DS_Store
 .bundle
 .chef
@@ -37,7 +38,6 @@ doc/code/*
 dump.rdb
 log/*.log*
 nohup.out
-public/assets/
 public/uploads.*
 public/uploads/
 shared/artifacts/
