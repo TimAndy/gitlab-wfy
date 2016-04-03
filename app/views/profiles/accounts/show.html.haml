@@ -30,9 +30,9 @@
 .row.prepend-top-default
   .col-lg-3.profile-settings-sidebar
     %h4.prepend-top-0
-      两步验证
+      双重认证
     %p
-      开启两步验证 (2FA) 增加账户安全性。
+      开启双重认证 (2FA) 增加账户安全性。
   .col-lg-9
     %p
       状态：#{current_user.two_factor_enabled? ? '已启用' : '已禁用'}
@@ -41,9 +41,9 @@
         请从 iOS 的 App Store 或 Android 的 Google Play 下载谷歌身份验证器 (Google Authenticator) 应用，然后扫描下面的二维码。
         更多可用的信息请参阅此#{link_to('文档', help_page_path('profile', 'two_factor_authentication'))}。
       .append-bottom-10
-        = link_to '开启两步验证', new_profile_two_factor_auth_path, class: 'btn btn-success'
+        = link_to '开启双重认证', new_profile_two_factor_auth_path, class: 'btn btn-success'
     - else
-      = link_to '禁用两步验证', profile_two_factor_auth_path, method: :delete, class: 'btn btn-danger',
+      = link_to '禁用双重认证', profile_two_factor_auth_path, method: :delete, class: 'btn btn-danger',
               data: { confirm: '确定要继续么？' }
 %hr
 - if button_based_providers.any?

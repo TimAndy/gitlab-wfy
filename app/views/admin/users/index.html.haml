@@ -13,11 +13,11 @@
         %small.badge= number_with_delimiter(User.admins.count)
     %li.filter-two-factor-enabled{class: "#{'active' if params[:filter] == 'two_factor_enabled'}"}
       = link_to admin_users_path(filter: 'two_factor_enabled') do
-        两步验证启用
+        双重认证启用
         %small.badge= number_with_delimiter(User.with_two_factor.count)
     %li.filter-two-factor-disabled{class: "#{'active' if params[:filter] == 'two_factor_disabled'}"}
       = link_to admin_users_path(filter: 'two_factor_disabled') do
-        两步验证禁用
+        双重认证禁用
         %small.badge= number_with_delimiter(User.without_two_factor.count)
     %li.filter-external{class: "#{'active' if params[:filter] == 'external'}"}
       = link_to admin_users_path(filter: 'external') do

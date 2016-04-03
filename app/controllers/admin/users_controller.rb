@@ -69,7 +69,7 @@ class Admin::UsersController < Admin::ApplicationController
   def disable_two_factor
     user.disable_two_factor!
     redirect_to admin_user_path(user),
-      notice: '此用户已禁止两步验证'
+      notice: '此用户已禁用双重认证'
   end
 
   def create

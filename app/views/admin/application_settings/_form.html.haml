@@ -120,17 +120,17 @@
             = f.check_box :signin_enabled
             开启登录
     .form-group
-      = f.label :two_factor_authentication, '两步验证', class: 'control-label col-sm-2'
+      = f.label :two_factor_authentication, '双重认证', class: 'control-label col-sm-2'
       .col-sm-10
         .checkbox
           = f.label :require_two_factor_authentication do
             = f.check_box :require_two_factor_authentication
-            强制全部用户设置两步验证
+            强制全部用户设置双重认证
     .form-group
-      = f.label :two_factor_authentication, '两步验证宽限期 (小时)', class: 'control-label col-sm-2'
+      = f.label :two_factor_authentication, '双重认证宽限期 (小时)', class: 'control-label col-sm-2'
       .col-sm-10
         = f.number_field :two_factor_grace_period, min: 0, class: 'form-control', placeholder: '0'
-        .help-block 允许用户跳过强制两步验证配置的时间范围（小时）
+        .help-block 允许用户跳过强制双重认证配置的时间范围（小时）
     .form-group
       = f.label :restricted_signup_domains, '注册限制域名', class: 'control-label col-sm-2'
       .col-sm-10
