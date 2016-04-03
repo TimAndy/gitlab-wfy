@@ -70,7 +70,7 @@
             %span.help-block 如果没有上传头像将使用邮箱头像服务。
       .form-group
         = f.label :public_email, '公开邮箱', class: "label-light"
-        = f.select :public_email, options_for_select(@user.all_emails, selected: @user.public_email), {include_blank: 'Do not show on profile'}, class: "select2"
+        = f.select :public_email, options_for_select(@user.all_emails, selected: @user.public_email), {include_blank: '不显示在个人资料上'}, class: "select2"
         %span.help-block 此电子邮箱将显示在公开的个人资料上。
       .form-group
         = f.label :skype, class: "label-light"
