@@ -96,14 +96,14 @@
       = f.label :session_expire_delay, '会话保留时间 (分钟)', class: 'control-label col-sm-2'
       .col-sm-10
         = f.number_field :session_expire_delay, class: 'form-control'
-        %span.help-block#session_expire_delay_help_block 要应用此变更需要重启 GitLab
+        %span.help-block#session_expire_delay_help_block 要应用此变更需要重启 富友Code
     .form-group
       = f.label :user_oauth_applications, '用户 OAuth 应用', class: 'control-label col-sm-2'
       .col-sm-10
         .checkbox
           = f.label :user_oauth_applications do
             = f.check_box :user_oauth_applications
-            允许用户注册使用 GitLab 为 OAuth 提供者的应用
+            允许用户注册应用，以将 富友Code 作为 OAuth 提供者
 
   %fieldset
     %legend 登录限制
