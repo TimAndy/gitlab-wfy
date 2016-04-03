@@ -1,3 +1,4 @@
+#encoding: utf-8
 class Profiles::TwoFactorAuthsController < Profiles::ApplicationController
   skip_before_action :check_2fa_requirement
 
