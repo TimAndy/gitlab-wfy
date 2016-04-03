@@ -51,7 +51,7 @@
   .form-actions
     = f.submit '保存', class: 'btn btn-save'
     - if @appearance.persisted?
-      = link_to '预览最后保存', preview_admin_appearances_path, class: 'btn', target: '_blank'
+      = link_to '预览上次保存', preview_admin_appearances_path, class: 'btn', target: '_blank'
 
     - if @appearance.updated_at
       %span.pull-right
