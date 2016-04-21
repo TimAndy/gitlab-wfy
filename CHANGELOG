@@ -1,5 +1,15 @@
 Please view this file on the master branch, on stable branches it's out of date.
 
+v 8.6.7
+  - Fix persistent XSS vulnerability in `commit_person_link` helper
+  - Fix persistent XSS vulnerability in Label and Milestone dropdowns
+  - Fix vulnerability that made it possible to enumerate private projects belonging to group
+
+v 8.6.6
+  - Expire the exists cache before deletion to ensure project dir actually exists (Stan Hu). !3413
+  - Fix error on language detection when repository has no HEAD (e.g., master branch) (Jeroen Bobbeldijk). !3654
+  - Fix revoking of authorized OAuth applications (Connor Shea). !3690
+
 v 8.6.5
   - Fix importing from GitHub Enterprise. !3529
   - Perform the language detection after updating merge requests in `GitPushService`, leading to faster visual feedback for the end-user. !3533
