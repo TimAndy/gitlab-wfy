@@ -42,7 +42,7 @@ class Admin::UsersController < Admin::ApplicationController
 
   def unblock
     if user.ldap_blocked?
-      redirect_back_or_admin_user(alert: "此用户无法通过 GitLab 来启用")
+      redirect_back_or_admin_user(alert: "此用户无法通过 富友Code 来启用")
     elsif user.activate
       redirect_back_or_admin_user(notice: "启用成功")
     else
