@@ -1,5 +1,5 @@
-- page_title "滥用举报"
-%h3.page-title 滥用举报
+- page_title "违规举报"
+%h3.page-title 违规举报
 %hr
 - if @abuse_reports.present?
   .table-holder
@@ -14,4 +14,4 @@
       = render @abuse_reports
   = paginate @abuse_reports
 - else
-  %h4 没有滥用举报
+  %h4 没有违规举报
