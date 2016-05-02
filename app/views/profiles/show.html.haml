@@ -9,7 +9,7 @@
         - if @user.avatar?
           在这里修改头像
           - if Gitlab.config.gravatar.enabled
-            或者删除当前头像使用 #{link_to Gitlab.config.gravatar.host, "http://" + Gitlab.config.gravatar.host} 头像
+            或者删除当前头像使用 #{link_to Gitlab.config.gravatar.host, "http://" + Gitlab.config.gravatar.host} 头像。
         - else
           在这里上传头像
           - if Gitlab.config.gravatar.enabled
