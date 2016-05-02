@@ -1,11 +1,11 @@
-- page_title '两步验证', '账号'
+- page_title '双重认证', '账号'
 
 .row.prepend-top-default
   .col-lg-3
     %h4.prepend-top-0
-      两步验证 (2FA)
+      双重认证 (2FA)
     %p
-      开启两步验证 (2FA) 增加账户安全性。
+      开启双重认证 (2FA) 增加账户安全性。
   .col-lg-9
     %p
       请从 iOS 的 App Store 或 Android 的 Google Play 下载谷歌身份验证器 (Google Authenticator) 应用，然后扫描下面的二维码。
@@ -35,5 +35,5 @@
         = label_tag :pin_code, 'Pin 码', class: "label-light"
         = text_field_tag :pin_code, nil, class: "form-control", required: true
       .prepend-top-default
-        = submit_tag '开启两步验证', class: 'btn btn-success'
+        = submit_tag '开启双重认证', class: 'btn btn-success'
         = link_to '稍后配置', skip_profile_two_factor_auth_path, :method => :patch,  class: 'btn btn-cancel' if two_factor_skippable?
