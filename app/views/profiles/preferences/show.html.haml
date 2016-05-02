@@ -42,7 +42,7 @@
         选择固定 (最大 1200px) 或自适应 (100%) 页面宽度。
     .form-group
       = f.label :dashboard, class: 'label-light' do
-        默认仪表盘
+        默认看板
         = link_to('(?)', help_page_path('profile', 'preferences') + '#default-dashboard', target: '_blank')
       = f.select :dashboard, dashboard_choices, {}, class: 'form-control'
     .form-group
