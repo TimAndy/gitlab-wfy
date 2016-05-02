@@ -30,4 +30,4 @@
       .prepend-top-default.append-bottom-default
         = f.submit '保存密码', class: "btn btn-create append-right-10"
         - unless @user.password_automatically_set?
-          = link_to "我忘记了自己的密码", reset_profile_password_path, method: :put, class: "account-btn-link"
+          = link_to "忘记密码？", reset_profile_password_path, method: :put, class: "account-btn-link"
