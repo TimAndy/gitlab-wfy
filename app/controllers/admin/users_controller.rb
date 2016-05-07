@@ -32,6 +32,22 @@ class Admin::UsersController < Admin::ApplicationController
     user
   end
 
+  def impersonate
+    if user.blocked?
+      flash[:alert] = "你不能假冒禁用的用户"
+
+      redirect_to admin_user_path(user)
+    else
+      session[:impersonator_id] = current_user.id
+
+      warden.set_user(user, scope: :user)
+
+      flash[:alert] = "你正在假冒 #{user.username}"
+
+      redirect_to root_path
+    end
+  end
+
   def block
     if user.block
       redirect_back_or_admin_user(notice: "禁用成功")
@@ -123,7 +139,7 @@ class Admin::UsersController < Admin::ApplicationController
     DeleteUserWorker.perform_async(current_user.id, user.id)
 
     respond_to do |format|
-      format.html { redirect_to admin_users_path, notice: "The user is being deleted." }
+      format.html { redirect_to admin_users_path, notice: "用户删除成功。" }
       format.json { head :ok }
     end
   end
