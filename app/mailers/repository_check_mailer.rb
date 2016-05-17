@@ -8,7 +8,7 @@ class RepositoryCheckMailer < BaseMailer
 
     mail(
       to: User.admins.pluck(:email),
-      subject: "GitLab 后台 | #{@message}"
+      subject: "富友Code 后台 | #{@message}"
     )
   end
 end

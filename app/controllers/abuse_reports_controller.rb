@@ -12,7 +12,7 @@ class AbuseReportsController < ApplicationController
     if @abuse_report.save
       @abuse_report.notify
 
-      message = "感谢您的报告。GitLab 管理员会尽快处理。"
+      message = "感谢您的报告。富友Code 管理员会尽快处理。"
       redirect_to @abuse_report.user, notice: message
     else
       render :new
