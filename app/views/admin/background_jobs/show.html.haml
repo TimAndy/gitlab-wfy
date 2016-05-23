@@ -1,6 +1,6 @@
 - page_title "后台作业"
 %h3.page-title 后台作业
-%p.light GitLab 使用 #{link_to "sidekiq", "http://sidekiq.org/"} 库同步作业处理
+%p.light 富友Code 使用 #{link_to "sidekiq", "http://sidekiq.org/"} 库同步作业处理
 
 %hr
 
@@ -10,7 +10,7 @@
     - if @sidekiq_processes.empty?
       %h4.cred
         %i.fa.fa-exclamation-triangle
-        没有运行的 sidekiq 进程，请重新启动 GitLab
+        没有运行的 sidekiq 进程，请重新启动 富友Code
     - else
       .table-holder
         %table.table
@@ -35,10 +35,10 @@
       .clearfix
         %p
           %i.fa.fa-exclamation-circle
-          如果显示 '[25 of 25 busy]' 请使用 'sudo service gitlab reload' 重新启动 GitLab。
+          如果显示 '[25 of 25 busy]' 请使用 'sudo service gitlab reload' 重新启动 富友Code。
         %p
           %i.fa.fa-exclamation-circle
-          如果列出超过一个 sidekiq 进程，请停止 GitLab，杀死剩余的 sidekiq 进程 (sudo pkill -u #{Settings.gitlab.user} -f sidekiq)，然后重新启动 GitLab。
+          如果列出超过一个 sidekiq 进程，请停止 富友Code，杀死剩余的 sidekiq 进程 (sudo pkill -u #{Settings.gitlab.user} -f sidekiq)，然后重新启动 富友Code。
 
 
 

@@ -86,14 +86,14 @@
       = f.label :session_expire_delay, 'Session duration (minutes)', class: 'control-label col-sm-2'
       .col-sm-10
         = f.number_field :session_expire_delay, class: 'form-control'
-        %span.help-block#session_expire_delay_help_block GitLab restart is required to apply changes
+        %span.help-block#session_expire_delay_help_block 富友Code restart is required to apply changes
     .form-group
       = f.label :user_oauth_applications, 'User OAuth applications', class: 'control-label col-sm-2'
       .col-sm-10
         .checkbox
           = f.label :user_oauth_applications do
             = f.check_box :user_oauth_applications
-            Allow users to register any application to use GitLab as an OAuth provider
+            Allow users to register any application to use 富友Code as an OAuth provider
 
   %fieldset
     %legend Sign-in Restrictions
@@ -289,7 +289,7 @@
             = f.check_box :sentry_enabled
             开启 Sentry
           .help-block
-            Sentry 是一个错误报告和日志记录工具。GitLab 当前并未自带此工具，需要在后面的网址下载并安装：
+            Sentry 是一个错误报告和日志记录工具。富友Code 当前并未自带此工具，需要在后面的网址下载并安装：
             %a{ href: 'https://getsentry.com', target: '_blank' } https://getsentry.com
 
     .form-group
@@ -306,7 +306,7 @@
             = f.check_box :repository_checks_enabled
             开启版本仓库检查
           .help-block
-            GitLab 将定期给所有项目和维基版本仓库运行
+            富友Code 将定期给所有项目和维基版本仓库运行
             %a{ href: 'https://www.kernel.org/pub/software/scm/git/docs/git-fsck.html', target: 'blank' } 'git fsck'
             命令来寻找无记载磁盘损坏问题。
     .form-group
