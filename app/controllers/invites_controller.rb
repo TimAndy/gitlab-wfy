@@ -55,7 +55,7 @@ class InvitesController < ApplicationController
     return if current_user
 
     notice = "要接受此邀请，请登录"
-    notice << "或者创建账号" if current_application_settings.signup_enabled?
+    notice << "或创建账号" if current_application_settings.signup_enabled?
     notice << "。"
 
     store_location_for :user, request.fullpath
