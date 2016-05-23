@@ -17,7 +17,7 @@ zh:
     time: 时间
     queries: 查询
     finished_at: 结束时间
-    ago: 之前
+    ago: 前
     view: 查看
     seconds: 秒
     milliseconds: ms
