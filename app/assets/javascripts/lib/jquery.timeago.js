@@ -44,7 +44,7 @@
         prefixAgo: null,
         prefixFromNow: null,
         suffixAgo: "之前",
-        suffixFromNow: null,
+        suffixFromNow: "后",
         seconds: "不到 1 分钟",
         minute: "大约 1 分钟",
         minutes: " %d 分钟",
@@ -96,7 +96,7 @@
         substitute($l.years, Math.round(years));
 
       var separator = $l.wordSeparator || "";
-      if ($l.wordSeparator === undefined) { separator = " "; }
+      if ($l.wordSeparator === undefined) { separator = ""; }
       return $.trim([prefix, words, suffix].join(separator));
     },
     parse: function(iso8601) {
