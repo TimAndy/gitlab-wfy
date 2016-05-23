@@ -39,11 +39,11 @@
               %i.fa.fa-times
 
         %li.two-factor-status
-          %span.light 两步验证：
+          %span.light 双重认证：
           %strong{class: @user.two_factor_enabled? ? 'cgreen' : 'cred'}
             - if @user.two_factor_enabled?
               已启用
-              = link_to '禁用', disable_two_factor_admin_user_path(@user), data: {confirm: '确定要继续么？'}, method: :patch, class: 'btn btn-xs btn-remove pull-right', title: '禁用两步验证'
+              = link_to '禁用', disable_two_factor_admin_user_path(@user), data: {confirm: '确定要继续么？'}, method: :patch, class: 'btn btn-xs btn-remove pull-right', title: '禁用双重认证'
             - else
               已禁用
 
