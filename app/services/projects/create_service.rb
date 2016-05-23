@@ -6,6 +6,7 @@ module Projects
 
     def execute
       forked_from_project_id = params.delete(:forked_from_project_id)
+      import_data = params.delete(:import_data)
 
       @project = Project.new(params)
 
@@ -49,19 +50,17 @@ module Projects
         @project.build_forked_project_link(forked_from_project_id: forked_from_project_id)
       end
 
-      Project.transaction do
-        @project.save
+      save_project_and_import_data(import_data)
 
-        if @project.persisted? && !@project.import?
-          raise 'Failed to create repository' unless @project.create_repository
-        end
-      end
+      @project.import_start if @project.import?
 
       after_create_actions if @project.persisted?
 
+      @project.add_import_job if @project.import?
+
       @project
     rescue => e
-      message = "Unable to save project: #{e.message}"
+      message = "无法保存项目: #{e.message}"
       Rails.logger.error(message)
       @project.errors.add(:base, message) if @project
       @project
@@ -93,8 +92,16 @@ module Projects
       unless @project.group
         @project.team << [current_user, :master, current_user]
       end
+    end
 
-      @project.import_start if @project.import?
+    def save_project_and_import_data(import_data)
+      Project.transaction do
+        @project.create_or_update_import_data(data: import_data[:data], credentials: import_data[:credentials]) if import_data
+
+        if @project.save && !@project.import?
+          raise 'Failed to create repository' unless @project.create_repository
+        end
+      end
     end
   end
 end
