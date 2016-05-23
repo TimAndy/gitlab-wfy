@@ -64,14 +64,14 @@ zh:
   datetime:
     distance_in_words:
       about_x_hours:
-        one: 大约一小时
-        other: 大约 %{count} 小时
+        one: 约一小时
+        other: 约 %{count} 小时
       about_x_months:
-        one: 大约一个月
-        other: 大约 %{count} 个月
+        one: 约一个月
+        other: 约 %{count} 个月
       about_x_years:
-        one: 大约一年
-        other: 大约 %{count} 年
+        one: 约一年
+        other: 约 %{count} 年
       almost_x_years:
         one: 接近一年
         other: 接近 %{count} 年
