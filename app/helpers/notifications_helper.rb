@@ -1,4 +1,3 @@
-#encoding: utf-8
 module NotificationsHelper
   include IconsHelper
 
@@ -19,6 +18,16 @@ module NotificationsHelper
 
   def notification_icon(level, text = nil)
     icon("#{notification_icon_class(level)} fw", text: text)
+  end
+
+  def notification_levels
+    [
+        ['关闭', :disabled],
+        ['参与', :participating],
+        ['关注', :watch],
+        ['全局', :global],
+        ['被提及', :mention]
+    ]
   end
 
   def notification_title(level)

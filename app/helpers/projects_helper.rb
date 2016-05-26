@@ -1,4 +1,3 @@
-#encoding: utf-8
 module ProjectsHelper
   def remove_from_project_team_message(project, member)
     if member.user
@@ -143,6 +142,10 @@ module ProjectsHelper
 
     if project.repo_exists? && can?(current_user, :read_merge_request, project)
       nav_tabs << :merge_requests
+    end
+
+    if can?(current_user, :read_pipeline, project)
+      nav_tabs << :pipelines
     end
 
     if can?(current_user, :read_build, project)
