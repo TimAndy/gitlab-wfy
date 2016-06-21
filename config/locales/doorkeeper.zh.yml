@@ -102,7 +102,7 @@ zh:
     errors:
       messages:
         # Common error messages
-        invalid_request: '这个请求缺少必要的参数，或参数值、格式不正确'
+        invalid_request: '此请求缺少必要的参数，或参数值、格式不正确'
         invalid_redirect_uri: '无效的登录回调地址'
         unauthorized_client: '未授权的应用，请求无法执行'
         access_denied: '用户或服务器拒绝了请求'

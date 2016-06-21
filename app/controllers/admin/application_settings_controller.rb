@@ -21,7 +21,7 @@ class Admin::ApplicationSettingsController < Admin::ApplicationController
 
   def reset_health_check_token
     @application_setting.reset_health_check_access_token!
-    flash[:notice] = 'New health check access token has been generated!'
+    flash[:notice] = '已生成新的健康检查访问授权码！'
     redirect_to :back
   end
 
@@ -107,6 +107,7 @@ class Admin::ApplicationSettingsController < Admin::ApplicationController
       :repository_checks_enabled,
       :metrics_packet_size,
       :send_user_confirmation_email,
+      :container_registry_token_expire_delay,
       restricted_visibility_levels: [],
       import_sources: [],
       disabled_oauth_sign_in_sources: []

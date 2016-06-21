@@ -40,7 +40,7 @@
 
   - if project_nav_tab? :pipelines
     = nav_link(controller: :pipelines) do
-      = link_to project_pipelines_path(@project), title: 'Pipelines', class: 'shortcuts-pipelines' do
+      = link_to project_pipelines_path(@project), title: '管道', class: 'shortcuts-pipelines' do
         = icon('ship fw')
         %span
           管道
@@ -56,10 +56,10 @@
 
   - if project_nav_tab? :container_registry
     = nav_link(controller: %w(container_registry)) do
-      = link_to project_container_registry_path(@project), title: 'Container Registry', class: 'shortcuts-container-registry' do
+      = link_to project_container_registry_path(@project), title: '容器注册表', class: 'shortcuts-container-registry' do
         = icon('hdd-o fw')
         %span
-          Container Registry
+          容器注册表
 
   - if project_nav_tab? :graphs
     = nav_link(controller: %w(graphs)) do
